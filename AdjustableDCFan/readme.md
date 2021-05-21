@@ -6,4 +6,5 @@ This project uses Arduino Uno and its features to build controllable DC fan. Fan
 - Speed stage is displayed with leds
 - 7 segment displays 'u' for user controllable or 'a' for auto mode
 
+`<demo>` : <https://youtu.be/pvePvXHyPKE>
 
