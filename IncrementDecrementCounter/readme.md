@@ -6,5 +6,9 @@ Arduino Uno was used as a development platform and was coded in C with Atmel Stu
 
 - 7-Segment display
 - SN74HC595N  Shift register with leds
-- Push buttons
+- Push button
+
+`<demo>` : <https://youtu.be/9wYHkLGWPQg>
+
+
 
