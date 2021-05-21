@@ -1,4 +1,4 @@
 *.mp4
 *.vs
-/Debug
+**/Debug
 *.xml
