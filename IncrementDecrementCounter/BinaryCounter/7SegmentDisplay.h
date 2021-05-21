@@ -10,8 +10,8 @@
 
 #define SEGMENT_AF_DDR DDRB
 #define SEGMENT_G_DDR DDRD	
-#define SEGMENT_AF_PORT PORTB								// Segments A-F on PORTB
-#define SEGMENT_G_PORT PORTD								// Segment G on PORTD
+#define SEGMENT_AF_PORT PORTB							// Segments A-F on PORTB
+#define SEGMENT_G_PORT PORTD							// Segment G on PORTD
 
 #define SEGMENT_A	PB0
 #define SEGMENT_B	PB1
@@ -20,14 +20,14 @@
 #define SEGMENT_E	PB4
 #define SEGMENT_F	PB5
 #define SEGMENT_G	PD7
-// Turn segment on													// 7 Segment Pin		Uno Pin
-#define SEGMENT_A_ON	SEGMENT_AF_PORT |= (1 << SEGMENT_A)			// PIN7					PB0
-#define SEGMENT_B_ON	SEGMENT_AF_PORT |= (1 << SEGMENT_B)			// PIN6					PB1
-#define SEGMENT_C_ON	SEGMENT_AF_PORT |= (1 << SEGMENT_C)			// PIN4					PB2
-#define SEGMENT_D_ON	SEGMENT_AF_PORT |= (1 << SEGMENT_D)			// PIN2					PB3
-#define SEGMENT_E_ON	SEGMENT_AF_PORT |= (1 << SEGMENT_E)			// PIN1					PB4
-#define SEGMENT_F_ON	SEGMENT_AF_PORT |= (1 << SEGMENT_F)			// PIN9					PB5
-#define SEGMENT_G_ON	SEGMENT_G_PORT  |= (1 << SEGMENT_G)			// PIN10				PD7
+// Turn segment on													// 7 Segment Pin	Uno Pin
+#define SEGMENT_A_ON	SEGMENT_AF_PORT |= (1 << SEGMENT_A)			// PIN7				PB0
+#define SEGMENT_B_ON	SEGMENT_AF_PORT |= (1 << SEGMENT_B)			// PIN6				PB1
+#define SEGMENT_C_ON	SEGMENT_AF_PORT |= (1 << SEGMENT_C)			// PIN4				PB2
+#define SEGMENT_D_ON	SEGMENT_AF_PORT |= (1 << SEGMENT_D)			// PIN2				PB3
+#define SEGMENT_E_ON	SEGMENT_AF_PORT |= (1 << SEGMENT_E)			// PIN1				PB4
+#define SEGMENT_F_ON	SEGMENT_AF_PORT |= (1 << SEGMENT_F)			// PIN9				PB5
+#define SEGMENT_G_ON	SEGMENT_G_PORT  |= (1 << SEGMENT_G)			// PIN10			PD7
 
 // Function prototypes
 void SevenSegDimSegments();							// Turn all segments off
@@ -37,8 +37,8 @@ void SevenSegTurnLetterOn(char letter);
 	
 	// Dim every segment
 	void SevenSegDimSegments(){
-		SEGMENT_AF_PORT &= 0x00;				// Dims A-F
-		SEGMENT_G_PORT &= ~(1 << SEGMENT_G);			// Dims G
+		SEGMENT_AF_PORT &= 0x00;					// Dims A-F
+		SEGMENT_G_PORT &= ~(1 << SEGMENT_G);		// Dims G
 	}
 		
 	// Turn individual segment on

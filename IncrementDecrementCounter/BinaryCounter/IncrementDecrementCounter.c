@@ -46,19 +46,19 @@ void waitMS(uint16_t delayMS);
 				-> If compare value is set to 157 timer takes 10.048 ms
 		*/
 	
-		TCCR0A = 1<<WGM01;									// Clear timer on compare match WGM02:0 = 2
-		OCR0A = 157;										// Compare value for 10ms
-		TCNT0  = 0x00;										// reset counter
-		TIFR0 |= OCF0A;										// clear IRQ flag writing 1's to register
-		TCCR0B = _BV(CS00) | _BV(CS02);						// prescaler 1024 
+		TCCR0A = 1<<WGM01;							// Clear timer on compare match WGM02:0 = 2
+		OCR0A = 157;								// Compare value for 10ms
+		TCNT0  = 0x00;								// reset counter
+		TIFR0 |= OCF0A;								// clear IRQ flag writing 1's to register
+		TCCR0B = _BV(CS00) | _BV(CS02);				// prescaler 1024 
 	
 		/* DATA DIRECTIONS */
 		SR595_DDR |= (1<<SR595_SER) | (1<<SR595_SRCLK) | (1<<SR595_RCLK);
 		SEGMENT_AF_DDR |= 0xFF;								
 		SEGMENT_G_DDR |= (1<<SEGMENT_G);
 	
-		uint8_t i = 0;										// As i is an unsigned 8 bit integer, it will just flip to 0 when it goes over 255, no need to make any if statements to prevent overflow for the counter
-	
+		uint8_t i = 0;								// 8 bit integer will flip to 0 when it goes over limit (255)
+		
 		while(1){
 			
 			if (BUTTON_INCREMENT_ON){
