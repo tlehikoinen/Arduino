@@ -1,5 +1,8 @@
 # Arduino Projects
 
+## Snake
+Snake on 8x8 LED matrix
+
 ## IncrementDecrementCounter  
 Push buttons for counting either up or down, displays number in binary with leds those are connected to shift register (SN74HC595)
 
