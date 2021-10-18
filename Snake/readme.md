@@ -2,9 +2,9 @@
 
 `<demo>` : <https://www.youtube.com/watch?v=oUopZZrUELU>
 
-<img src="Arduino/Snake/build_picture.PNG" height=300px, width=420px>
+<img src="https://github.com/yellowpasta/Arduino/blob/master/Snake/build_picture.png" height=300px, width=420px>
 
-##### Implementation of legendary snake game
+### Implementation of legendary snake game
 
 - Control snake with push buttons (left, right, up, down)  
 - Eat randomly appearing objects and avoid hitting your tail  
@@ -31,12 +31,12 @@
 
 ##### 1588BS 8x8 LED Matrix
 - Common anode
-- Pinout (Numbers for rows, letters for columns)
-H G 1 A 3 F D 0
+- Pinout (Numbers for rows, letters for columns)  
+H G 1 A 3 F D 0  
 4 6 B C 7 E 5 2
 
 ##### SN74HC595
-- Shift register controls grounding for columns and can be used to control which LED's are on for a row
+- Shift register controls grounding for columns and is used to control which LED's are on for a row
 - Uno to SN74HC595 connections
     - PB0 - SER
     - PB1 - RCLK
